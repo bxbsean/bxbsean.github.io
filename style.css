@@ -114,7 +114,18 @@ li {
   user-select: none;
   transition: background-color 0.3s;
 }
-.postcard .postcard__tagbox .tag__item:hover {
+
+.tag {
+  background: rgba(83, 83, 83, 0.4);
+  border-radius: 3px;
+  padding: 2.5px 10px;
+  margin: 0 5px 5px 0;
+  cursor: default;
+  user-select: none;
+  transition: background-color 0.3s;
+}
+
+.postcard .postcard__tagbox .tag__item:hover .tag:hover {
   background: rgba(83, 83, 83, 0.8);
 }
 .postcard:before {
@@ -341,6 +352,26 @@ li {
     background-image: linear-gradient(30deg, rgba(49, 138, 133, 0.1), transparent 50%);
   }
 
+  .postcard .postcard__tagbox .white.play:hover {
+    background: #757575;
+  }
+
+  .white .postcard__title:hover {
+    color: #ffffff;
+  }
+  
+  .white .postcard__bar {
+    background-color: #ffffff;
+  }
+  
+  .white::before {
+    background-image: linear-gradient(-30deg, rgba(255, 255, 255, 0.1), transparent 50%);
+  }
+  
+  .white:nth-child(2n)::before {
+    background-image: linear-gradient(30deg, rgba(255, 255, 255, 0.1), transparent 50%);
+  }
+
 @media screen and (min-width: 769px) {
   .green::before {
     background-image: linear-gradient(-80deg, rgba(121, 221, 9, 0.1), transparent 50%);
@@ -398,9 +429,18 @@ li {
     background-image: linear-gradient(80deg, rgba(49, 138, 133, 0.1), transparent 50%);
   }
 
+  .white::before {
+    background-image: linear-gradient(-80deg, rgba(255, 255, 255, 0.1), transparent 50%);
+  }
+
+  .white:nth-child(2n)::before {
+    background-image: linear-gradient(80deg, rgba(255, 255, 255, 0.1), transparent 50%);
+  }
+
   .underline {
     text-decoration: underline;
     text-decoration-thickness: 2px;
-    text-decoration-color: #0076bd;
+    text-decoration-color: #ffffff;
+    font-size: large;
   }
 }
